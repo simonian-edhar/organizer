@@ -1,0 +1,203 @@
+/* Register Page Styles */
+.register-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  padding: 20px;
+}
+
+.register-container {
+  width: 100%;
+  max-width: 480px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  padding: 40px;
+}
+
+.register-logo {
+  display: block;
+  margin: 0 auto 20px;
+}
+
+.register-title {
+  text-align: center;
+  margin: 0 0 8px;
+  color: #16213e;
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+.register-subtitle {
+  text-align: center;
+  margin: 0 0 24px;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.register-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.register-header h1 {
+  margin: 20px 0 10px;
+  color: #16213e;
+  font-size: 1.5rem;
+}
+
+.register-header p {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.form-section {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.form-section h3 {
+  margin: 0 0 15px;
+  color: #16213e;
+  font-size: 1.1rem;
+}
+
+.register-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.register-alert {
+  margin-bottom: 16px;
+}
+
+.register-footer {
+  text-align: center;
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid #eee;
+}
+
+.register-login {
+  margin: 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.register-login button {
+  background: none;
+  border: none;
+  color: #667eea;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0;
+  font-size: inherit;
+}
+
+.register-login button:hover {
+  text-decoration: underline;
+}
+
+.register-footer a {
+  color: #e94560;
+  text-decoration: none;
+}
+
+.register-footer a:hover {
+  text-decoration: underline;
+}
+
+.error-message {
+  background: #fff3f3;
+  border: 1px solid #ffcdd2;
+  color: #c62828;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+/* Password strength indicator */
+.password-strength {
+  margin-top: -12px;
+}
+
+.strength-bar {
+  height: 4px;
+  background: #e0e0e0;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.strength-fill {
+  height: 100%;
+  transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.strength-fill.strength-0,
+.strength-fill.strength-1,
+.strength-fill.strength-2 {
+  background: #e94560;
+}
+
+.strength-fill.strength-3,
+.strength-fill.strength-4 {
+  background: #ff9800;
+}
+
+.strength-fill.strength-5,
+.strength-fill.strength-6 {
+  background: #4caf50;
+}
+
+.strength-text {
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 4px;
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .register-container {
+    padding: 24px;
+  }
+
+  .register-title {
+    font-size: 1.5rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .register-actions {
+    flex-direction: column;
+  }
+}

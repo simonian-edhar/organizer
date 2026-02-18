@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls:*)",
+      "Read(/Users/edhar/Documents/Адвокатська практика/Сайт Органайзер Юриста/Project Z Code/package.json)",
+      "Write",
+      "Edit",
+      "Bash(cd:*)",
+      "Read(/Users/edhar/Documents/Адвокатська практика/Сайт Органайзер Юриста/Project Z Code/docker-compose.yml)",
+      "Read(/Users/edhar/Documents/Адвокатська практика/Сайт Органайзер Юриста/Project Z Code/.env.example)",
+      "Read(/Users/edhar/Documents/Адвокатська практика/Сайт Органайзер Юриста/Project Z Code/src/app.module.ts)",
+      "Read(/Users/edhar/Documents/Адвокатська практика/Сайт Органайзер Юриста/Project Z Code/src/main.ts)",
+      "Read(/Users/edhar/Documents/Адвокатська практика/Сайт Органайзер Юриста/Project Z Code/tsconfig.json)"
+    ]
+  },
+  "outputStyle": "Enterprise-SaaS-Strict"
+}

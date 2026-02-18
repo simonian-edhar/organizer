@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../../src/frontend/pages/profile/index.ts"],"sourcesContent":["export { ProfilePage } from './ProfilePage';\n"],"names":["ProfilePage"],"mappings":";;;;+BAASA;;;eAAAA,wBAAW;;;6BAAQ"}

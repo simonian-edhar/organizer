@@ -1,0 +1,328 @@
+.billing-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.billing-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.billing-header h1 {
+    font-size: 32px;
+    font-weight: 600;
+    color: #1a202c;
+    margin-bottom: 8px;
+}
+
+.billing-header p {
+    font-size: 16px;
+    color: #718096;
+}
+
+.current-subscription {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 40px;
+    color: white;
+}
+
+.current-subscription h3 {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 16px;
+    opacity: 0.9;
+}
+
+.subscription-info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.plan-badge {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.status-badge {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 6px 12px;
+    border-radius: 12px;
+    font-size: 14px;
+}
+
+.period-end {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.error-message {
+    background: #fed7d7;
+    color: #c53030;
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.error-message button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #c53030;
+}
+
+.plans-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+.plan-card {
+    background: white;
+    border: 2px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 32px;
+    transition: all 0.3s ease;
+}
+
+.plan-card:hover {
+    border-color: #667eea;
+    box-shadow: 0 10px 40px rgba(102, 126, 234, 0.1);
+}
+
+.plan-card.current {
+    border-color: #667eea;
+    background: linear-gradient(white, white) padding-box,
+                linear-gradient(135deg, #667eea 0%, #764ba2 100%) border-box;
+}
+
+.plan-header {
+    text-align: center;
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.plan-name {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1a202c;
+    margin-bottom: 16px;
+}
+
+.plan-price {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 4px;
+}
+
+.price-free {
+    font-size: 28px;
+    font-weight: 600;
+    color: #48bb78;
+}
+
+.price-amount {
+    font-size: 48px;
+    font-weight: 700;
+    color: #1a202c;
+}
+
+.price-currency {
+    font-size: 18px;
+    color: #718096;
+}
+
+.price-period {
+    font-size: 14px;
+    color: #a0aec0;
+}
+
+.plan-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 32px 0;
+}
+
+.plan-features li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 0;
+    font-size: 14px;
+}
+
+.plan-features li.included {
+    color: #2d3748;
+}
+
+.plan-features li.excluded {
+    color: #cbd5e0;
+    text-decoration: line-through;
+}
+
+.feature-icon {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+.plan-features li.included .feature-icon {
+    color: #48bb78;
+}
+
+.plan-features li.excluded .feature-icon {
+    color: #cbd5e0;
+}
+
+.plan-button {
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.plan-button:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.plan-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.plan-button.current {
+    background: #e2e8f0;
+    color: #718096;
+    cursor: default;
+}
+
+.loading-spinner {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.subscription-actions {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.cancel-button {
+    background: none;
+    border: 1px solid #e53e3e;
+    color: #e53e3e;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cancel-button:hover:not(:disabled) {
+    background: #e53e3e;
+    color: white;
+}
+
+.cancel-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.billing-footer {
+    background: white;
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.billing-footer h3 {
+    font-size: 18px;
+    color: #1a202c;
+    margin-bottom: 20px;
+}
+
+.payment-methods {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.payment-method {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 24px;
+    background: #f7fafc;
+    border-radius: 8px;
+}
+
+.method-icon {
+    font-size: 24px;
+}
+
+.access-denied {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.access-denied h2 {
+    font-size: 24px;
+    color: #1a202c;
+    margin-bottom: 12px;
+}
+
+.access-denied p {
+    color: #718096;
+    margin-bottom: 24px;
+}
+
+.back-button {
+    background: #667eea;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.back-button:hover {
+    background: #5a67d8;
+    transform: translateY(-1px);
+}

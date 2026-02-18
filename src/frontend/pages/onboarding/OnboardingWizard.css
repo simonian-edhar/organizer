@@ -1,0 +1,478 @@
+.onboarding-wizard {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.onboarding-container {
+    background: white;
+    border-radius: 24px;
+    width: 100%;
+    max-width: 800px;
+    padding: 40px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+.onboarding-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.onboarding-header h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1a202c;
+    margin-bottom: 8px;
+}
+
+.onboarding-header p {
+    font-size: 16px;
+    color: #718096;
+}
+
+/* Progress Indicator */
+.progress-indicator {
+    margin-bottom: 40px;
+}
+
+.progress-bar {
+    height: 4px;
+    background: #e2e8f0;
+    border-radius: 2px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+.steps-indicators {
+    display: flex;
+    justify-content: space-between;
+}
+
+.step-dot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.step-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    background: #e2e8f0;
+    color: #a0aec0;
+    transition: all 0.3s ease;
+}
+
+.step-dot.completed .step-icon,
+.step-dot.done .step-icon {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.step-dot.current .step-icon {
+    background: white;
+    border: 2px solid #667eea;
+    color: #667eea;
+}
+
+.step-label {
+    font-size: 12px;
+    color: #a0aec0;
+    text-align: center;
+    max-width: 80px;
+}
+
+.step-dot.completed .step-label,
+.step-dot.done .step-label {
+    color: #667eea;
+    font-weight: 500;
+}
+
+/* Step Content */
+.onboarding-content {
+    min-height: 400px;
+}
+
+.onboarding-step {
+    text-align: center;
+}
+
+.onboarding-step h2 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #1a202c;
+    margin-bottom: 12px;
+}
+
+.onboarding-step > p {
+    color: #718096;
+    margin-bottom: 32px;
+    font-size: 16px;
+}
+
+/* Forms */
+.onboarding-form {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #4a5568;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.form-row {
+    display: flex;
+    gap: 16px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+.form-actions {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin-top: 32px;
+}
+
+.next-button,
+.skip-button {
+    padding: 14px 32px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.next-button {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+}
+
+.next-button:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.next-button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.skip-button {
+    background: transparent;
+    color: #718096;
+    border: none;
+}
+
+.skip-button:hover {
+    color: #4a5568;
+}
+
+/* Subscription Step */
+.plans-selection {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.plan-option {
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.plan-option:hover {
+    border-color: #667eea;
+}
+
+.plan-option.selected {
+    border-color: #667eea;
+    background: rgba(102, 126, 234, 0.05);
+}
+
+.plan-option.popular {
+    border-color: #667eea;
+}
+
+.popular-badge {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 12px;
+    text-transform: uppercase;
+}
+
+.plan-option h3 {
+    font-size: 18px;
+    margin-bottom: 12px;
+    color: #1a202c;
+}
+
+.plan-price {
+    margin-bottom: 16px;
+}
+
+.plan-price .free {
+    font-size: 18px;
+    font-weight: 600;
+    color: #48bb78;
+}
+
+.plan-price .amount {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1a202c;
+}
+
+.plan-price .currency {
+    font-size: 14px;
+    color: #718096;
+}
+
+.plan-features-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 16px 0;
+    text-align: left;
+}
+
+.plan-features-list li {
+    font-size: 13px;
+    color: #4a5568;
+    padding: 4px 0;
+}
+
+.plan-radio {
+    text-align: center;
+}
+
+.plan-radio input[type='radio'] {
+    width: 20px;
+    height: 20px;
+    accent-color: #667eea;
+}
+
+/* Team Invitation Step */
+.emails-list {
+    max-width: 400px;
+    margin: 0 auto 16px;
+}
+
+.email-input-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.email-input-row input {
+    flex: 1;
+    padding: 12px 16px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.remove-button {
+    background: #fed7d7;
+    color: #e53e3e;
+    border: none;
+    width: 44px;
+    border-radius: 8px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.remove-button:hover {
+    background: #feb2b2;
+}
+
+.add-email-button {
+    background: none;
+    border: 2px dashed #cbd5e0;
+    color: #718096;
+    padding: 12px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    display: block;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.add-email-button:hover {
+    border-color: #667eea;
+    color: #667eea;
+}
+
+/* Final Step */
+.final-step .success-icon {
+    font-size: 64px;
+    margin-bottom: 24px;
+}
+
+.final-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.create-case-button {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 16px 32px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.create-case-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.quick-tips {
+    background: #f7fafc;
+    border-radius: 12px;
+    padding: 24px;
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.quick-tips h4 {
+    font-size: 14px;
+    color: #4a5568;
+    margin-bottom: 12px;
+}
+
+.quick-tips ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.quick-tips li {
+    font-size: 14px;
+    color: #718096;
+    margin-bottom: 8px;
+}
+
+/* Loading */
+.onboarding-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 0.8s linear infinite;
+    margin-bottom: 16px;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .onboarding-container {
+        padding: 24px;
+    }
+
+    .steps-indicators {
+        flex-wrap: wrap;
+        gap: 16px;
+        justify-content: center;
+    }
+
+    .step-label {
+        display: none;
+    }
+
+    .plans-selection {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+
+    .form-actions {
+        flex-direction: column-reverse;
+    }
+
+    .next-button,
+    .skip-button {
+        width: 100%;
+    }
+}

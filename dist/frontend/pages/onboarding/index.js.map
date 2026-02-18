@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../../src/frontend/pages/onboarding/index.ts"],"sourcesContent":["export { OnboardingWizard } from './OnboardingWizard';\n"],"names":["OnboardingWizard"],"mappings":";;;;+BAASA;;;eAAAA,kCAAgB;;;kCAAQ"}

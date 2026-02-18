@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../../src/frontend/pages/auth/index.ts"],"sourcesContent":["export { LoginPage } from './LoginPage';\nexport { RegisterPage } from './RegisterPage';\n"],"names":["LoginPage","RegisterPage"],"mappings":";;;;;;;;;;;QAASA;eAAAA,oBAAS;;QACTC;eAAAA,0BAAY;;;2BADK;8BACG"}
